@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vasu Khanna · Business Analytics Portfolio</title>
+  <meta name="description" content="Portfolio of Vasu Khanna — MSBA @ ASU. Projects, experience, and skills in analytics, BI, and data science." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2Pkf1QJ5r5vR8RAwOB1p5MN1neCEi0aYawslZx3Z1ZC2QxO3v4jL8rE2kw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#0b1020; /* deep navy */
+      --card:#121936;
+      --muted:#9aa3b2;
+      --text:#e8ecf8;
+      --brand:#7c5cff; /* violet */
+      --brand-2:#00d1ff; /* cyan */
+      --ring: 0 0 0 3px rgba(124,92,255,.25);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:radial-gradient(1200px 900px at 80% -10%, rgba(124,92,255,.25), transparent 60%), radial-gradient(1000px 700px at -10% -20%, rgba(0,209,255,.18), transparent 60%), var(--bg); color:var(--text)}
+    a{color:inherit; text-decoration:none}
+    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px); background:rgba(11,16,32,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
+    .nav{max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
+    .nav .brand{display:flex; gap:12px; align-items:center; font-weight:700}
+    .badge{padding:4px 10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-radius:999px; font-size:12px; font-weight:700; letter-spacing:.3px}
+    .nav a.link{padding:8px 10px; border-radius:8px; font-weight:600; color:var(--muted)}
+    .nav a.link:hover{color:var(--text); background:rgba(255,255,255,.06)}
+
+    .container{max-width:1100px; margin:auto; padding:28px 20px 60px}
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:32px 0 8px}
+    .hero h1{font-size:clamp(28px,5vw,46px); line-height:1.1; margin:8px 0}
+    .hero p.lead{color:var(--muted); font-size:clamp(16px,2.3vw,18px)}
+    .chiprow{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 0}
+    .chip{border:1px solid rgba(255,255,255,.12); color:var(--text); background:rgba(255,255,255,.04); padding:8px 12px; border-radius:999px; font-weight:600; font-size:14px}
+    .cta{display:flex; gap:12px; margin-top:18px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); font-weight:700}
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.08)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-color:transparent}
+
+    .grid{display:grid; gap:16px}
+    .two{grid-template-columns:repeat(2,1fr)}
+    .three{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+      .two,.three{grid-template-columns:1fr}
+    }
+
+    section{margin-top:44px}
+    h2{font-size:clamp(20px,3.3vw,28px); margin:0 0 14px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:18px}
+    .muted{color:var(--muted)}
+    .kicker{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); font-weight:800}
+    .row{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+    .pill{padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); font-weight:600; font-size:12px}
+
+    .list{display:flex; flex-direction:column; gap:12px}
+    .item{display:flex; justify-content:space-between; gap:14px; border:1px dashed rgba(255,255,255,.12); border-radius:12px; padding:12px}
+    .item h3{margin:0 0 6px; font-size:18px}
+
+    footer{border-top:1px solid rgba(255,255,255,.08); padding:24px 20px; text-align:center; color:var(--muted)}
+
+    /* focus styles */
+    :focus-visible{outline:none; box-shadow:var(--ring)}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <div class="brand"><span class="badge" aria-hidden="true">VK</span> <span>Vasu Khanna</span></div>
+      <div class="row" role="navigation">
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#experience">Experience</a>
+        <a class="link" href="#research">Research</a>
+        <a class="link" href="#projects">Projects</a>
+        <a class="link" href="#skills">Skills</a>
+        <a class="link" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="top">
+      <div>
+        <p class="kicker">Business Analytics · BI · Data Science</p>
+        <h1>Hi, I’m Vasu — I turn data into decisions.</h1>
+        <p class="lead">MSBA @ ASU (GPA 4.00). Experience across BI, ETL/automation, experimentation, and ML projects. I love building analytics that drive operations and growth.</p>
+        <div class="chiprow" aria-label="Highlights">
+          <span class="chip">MSBA · ASU</span>
+          <span class="chip">Operations & BI</span>
+          <span class="chip">SQL · Python · Power BI</span>
+          <span class="chip">BigQuery · Snowflake</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+          <a class="btn" href="assets/Vasu_Khanna_Resume.pdf" target="_blank" rel="noreferrer"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/vasu-khanna10" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+      <div class="card" aria-label="Quick facts">
+        <h2 style="margin:0 0 8px">Quick facts</h2>
+        <div class="list">
+          <div class="item"><div><strong>Current</strong><div class="muted">MSBA · W. P. Carey, ASU</div></div><div class="pill">Tempe, AZ</div></div>
+          <div class="item"><div><strong>Most recent role</strong><div class="muted">Operations & Business Analyst Intern · Bangers Snack Inc.</div></div><div class="pill">May–Aug 2025</div></div>
+          <div class="item"><div><strong>Focus</strong><div class="muted">BI dashboards, ETL automation, NLP & CV projects</div></div><div class="pill">Data & Decisions</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>I’m a business analyst with experience building data pipelines, BI dashboards, and ML-powered insights. I’ve supported operational analytics for supply chain and marketing, and contributed to research on clinical AI and computer vision. I enjoy simplifying complex data to help teams move faster.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3 style="margin:0">Arizona State University — W. P. Carey</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">Master of Science, Business Analytics · GPA 4.00/4.00 · Aug 2024 – May 2025 · Tempe, AZ</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:0">University of Delhi — Shri Ram College of Commerce</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">Bachelor of Commerce · July 2018 – June 2021 · New Delhi, IN</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3 style="margin:0">Operations & Business Analyst Intern · Bangers Snack Inc.</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">May 2025 – Aug 2025 · San Francisco, CA</p>
+          <ul>
+            <li>Built real-time inventory tracking with Google Forms/Sheets + Apps Script + Looker Studio; cut entry errors by 90% and sped updates by 96%.</li>
+            <li>Integrated campaign & supply readiness across 300+ Extra Mile locations; aligned with SAP-style workflows.</li>
+            <li>Automated pallet ID generation & reconciliation; enabled SKU-level audits and stock movement tracking.</li>
+            <li>Launched D2C channel (site + Amazon FBA) with inventory sync; improved fulfillment accuracy.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0">Marketing Analyst Intern · DG Brew Technologies</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">Oct 2022 – Apr 2023 · New Delhi, IN</p>
+          <ul>
+            <li>Led SEO & analytics improvements using industry research; improved visibility by 25%.</li>
+            <li>Built GA dashboards tracking traffic, bounce rate, conversion, and keyword ranks in Data Studio.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin:0">Data Analyst Intern · ESC India</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">Oct 2022 – Apr 2023 · New Delhi, IN</p>
+          <ul>
+            <li>Analyzed 2M+ sales records; engineered SQL-based ETL with stored procedures and CTEs for monthly reporting.</li>
+            <li>Refactored 20+ complex SQL queries (window functions, indexing) to cut response time by 35%.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="card">
+        <h3 style="margin:0">Research Assistant — Information Systems Lab, Arizona State University</h3>
+        <p class="muted" style="margin:.25rem 0 .75rem">Jan 2025 – Present · Tempe, AZ</p>
+        <ul>
+          <li>Improved clinical AI transparency for Alzheimer’s detection by annotating images and refining model subclasses; achieved ~95% accuracy.</li>
+          <li>Evaluated drone detection with mAP50 & F1-score; reports highlighted 30% lift over baseline.</li>
+          <li>Designed A/B tests and visualized trends in Power BI & GA4; drove 27.2% uptick in LinkedIn visibility.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3 style="margin:0">Grocery Store Review Analysis</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">NLP pipeline on 8k+ Yelp reviews; classification up to 98.4% accuracy. Identified drivers like stockouts & service delays; informed pricing & inventory strategy.</p>
+          <div class="row">
+            <span class="pill">Python</span>
+            <span class="pill">NLP</span>
+            <span class="pill">Regression/Classification</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 style="margin:0">Road Crack Detection & Repair Prioritization</h3>
+          <p class="muted" style="margin:.25rem 0 .75rem">Deep learning segmentation for bike-lane images; 91% accuracy, Dice 0.81. Built severity-based prioritization for repair allocation.</p>
+          <div class="row">
+            <span class="pill">Computer Vision</span>
+            <span class="pill">Segmentation</span>
+            <span class="pill">Dashboards</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Programming</h3>
+          <div class="row">
+            <span class="pill">Python</span>
+            <span class="pill">R</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Keras</span>
+            <span class="pill">scikit-learn</span>
+            <span class="pill">Matplotlib</span>
+            <span class="pill">Pandas</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Data & BI</h3>
+          <div class="row">
+            <span class="pill">Power BI</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">Excel</span>
+            <span class="pill">A/B & Multivariate Testing</span>
+            <span class="pill">Predictive Modeling</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px">Platforms & Warehousing</h3>
+          <div class="row">
+            <span class="pill">BigQuery</span>
+            <span class="pill">Snowflake</span>
+            <span class="pill">Azure Data Studio</span>
+            <span class="pill">MS SQL Server</span>
+            <span class="pill">SSIS</span>
+            <span class="pill">Google Apps Script</span>
+            <span class="pill">GA4 · HubSpot · SEMrush</span>
+            <span class="pill">GTM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Want to collaborate or chat? Reach out:</p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:vkhann13@asu.edu">vkhann13@asu.edu</a></p>
+        <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/vasu-khanna10" target="_blank" rel="noreferrer">linkedin.com/in/vasu-khanna10</a></p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+14807969732">+1 (480) 796-9732</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Vasu Khanna · Built with HTML/CSS. Hosted on GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
