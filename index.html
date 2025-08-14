@@ -1,129 +1,142 @@
-// Vasu Khanna's Portfolio Website (Light Theme, Modern + Formal-Fun Aesthetic)
-// Framework: React with Tailwind CSS and shadcn/ui components
+// Vasu Khanna's Developer-Themed Portfolio (Inspired by developer-folio-jet)
+// Framework: React + Tailwind + shadcn/ui (Light Theme, Clean + Engaging)
+// Deployment Ready for Vercel or GitHub Pages (after build)
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans p-6 space-y-12">
-      {/* HERO SECTION */}
-      <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Hi, I'm Vasu Khanna</h1>
-        <p className="text-lg max-w-3xl mx-auto">
-          Business Analytics professional and MSBA candidate at Arizona State University, turning complex data into strategic insight. With a blend of precision and storytelling, I solve business challenges in analytics, product, and marketing.
+    <div className="bg-white text-gray-900 font-sans px-6 md:px-24 py-12 space-y-20">
+      {/* HERO */}
+      <section className="text-center space-y-5">
+        <h1 className="text-5xl font-bold">Hi, I'm Vasu Khanna</h1>
+        <p className="text-xl max-w-2xl mx-auto">
+          Business Analytics professional and MSBA candidate at Arizona State University, skilled in turning complex data into strategies that drive growth, efficiency, and market impact. With experience in analytics, operations, marketing, and product strategy, plus a creative edge from award-winning theatre leadership, I bring both precision and storytelling to solve business challenges and deliver measurable results.
         </p>
-        <Button className="mt-2" asChild>
-          <a href="/Vasu_Khanna_CV.pdf" download>
-            Download My Resume
-          </a>
-        </Button>
+        <div className="space-x-4">
+          <Button asChild>
+            <a href="/Vasu_Khanna_CV.pdf" download>Download CV</a>
+          </Button>
+          <a href="mailto:vkhann13@asu.edu" className="underline text-blue-600">Contact</a>
+        </div>
       </section>
 
-      {/* TARGET ROLES */}
+      {/* ROLES */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">🎯 Target Roles</h2>
-        <p>
-          Business Analytics · Product Management · Marketing Strategy · Operations Consulting · Marketing Analyst · Business Intelligence · Data Analyst · Procurement · Business Operations
-        </p>
+        <h2 className="text-3xl font-semibold mb-4">🎯 Target Roles</h2>
+        <div className="flex flex-wrap gap-2">
+          {['Business Analytics','Product Management','Marketing Strategy','Operations Consulting','Marketing Analyst','BI Analyst','Data Analyst','Procurement Analyst','Business Ops Analyst'].map(role => (
+            <Badge key={role} variant="outline">{role}</Badge>
+          ))}
+        </div>
       </section>
 
-      {/* CURRENT ENGAGEMENTS */}
+      {/* CURRENT */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">📚 Current Engagements</h2>
+        <h2 className="text-3xl font-semibold mb-4">📚 Current Engagements</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>MS, Business Analytics</strong> – Arizona State University (Aug 2024 – May 2025, Tempe, AZ)
-          </li>
-          <li>
-            <strong>Research Assistant</strong> – IS Department, ASU (Jan 2025 – Present, Tempe, AZ)
-          </li>
+          <li><strong>MS, Business Analytics</strong> – W. P. Carey School, ASU (Aug 2024 – May 2025)</li>
+          <li><strong>Research Assistant</strong> – IS Dept., ASU (Jan 2025 – Present)</li>
         </ul>
       </section>
 
       {/* EDUCATION */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">🎓 Education</h2>
+        <h2 className="text-3xl font-semibold mb-4">🎓 Education</h2>
         <ul className="space-y-2">
-          <li>
-            <strong>MS Business Analytics</strong> – ASU (2024–2026)
-          </li>
-          <li>
-            <strong>Certified Data Analyst</strong> – AnalytixLabs (2023–2024)
-          </li>
-          <li>
-            <strong>Bachelor of Commerce</strong> – SRCC (2018–2021)
-          </li>
+          <li><strong>MS Business Analytics</strong> – Arizona State University (2024–2026)</li>
+          <li><strong>Certified Data Analyst</strong> – AnalytixLabs (2023–2024)</li>
+          <li><strong>Bachelor of Commerce</strong> – SRCC, University of Delhi (2018–2021)</li>
         </ul>
       </section>
 
       {/* EXPERIENCE */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">💼 Work Experience</h2>
+        <h2 className="text-3xl font-semibold mb-6">💼 Experience</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Card>
-            <CardContent className="p-4">
-              <h3 className="text-lg font-bold">Bangers Snack Inc. – Operations & Business Analyst Intern</h3>
-              <p className="text-sm text-gray-600">San Francisco, May–Aug 2025</p>
-              <ul className="list-disc list-inside text-sm mt-2 space-y-1">
-                <li>Built automated inventory tracking system across 6+ product lines using Google tools</li>
-                <li>Reduced manual errors by 90% and improved update speed by 96%</li>
-                <li>Led D2C ecommerce launch; generated $3.1K from 71 orders</li>
-                <li>Applied FIFO/FEFO logic to reduce waste and optimize shelf life</li>
-              </ul>
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-xl font-bold">Bangers Snacks Inc. – Operations & Business Analyst Intern</h3>
+              <p className="text-sm text-gray-500">May–Aug 2025 · San Francisco, CA</p>
+              <p>
+                Built an automated inventory tracking system and launched a D2C ecommerce channel. Managed SAP-aligned supply planning for 300+ stores and optimized SKU-level procurement, driving cost savings and fulfillment efficiency.
+              </p>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <h3 className="text-lg font-bold">DG Brew Technologies – Marketing Analyst Intern</h3>
-              <p className="text-sm text-gray-600">New Delhi, May–Jun 2023</p>
-              <ul className="list-disc list-inside text-sm mt-2 space-y-1">
-                <li>Boosted SEO visibility by 25% through optimization</li>
-                <li>Analyzed GA4 metrics and built performance dashboards</li>
-              </ul>
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-xl font-bold">DG Brew Technologies – Marketing Analyst Intern</h3>
+              <p className="text-sm text-gray-500">May–Jun 2023 · New Delhi, IN</p>
+              <p>
+                Conducted digital marketing and SEO audits, boosting visibility by 25%. Developed GA dashboards and monitored KPIs like traffic, bounce rate, and conversions.
+              </p>
             </CardContent>
           </Card>
-          {/* Add ESC India and Aican Automate similarly */}
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-xl font-bold">ESC India – Data Analyst Intern</h3>
+              <p className="text-sm text-gray-500">Oct 2022 – Apr 2023 · New Delhi, IN</p>
+              <p>
+                Analyzed export data and developed KPIs to improve promotional targeting by 15%. Built SQL pipelines for reporting automation, reducing database load time by 35%.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-xl font-bold">Aican Automate – Data Analyst Intern</h3>
+              <p className="text-sm text-gray-500">Jan–Aug 2022 · New Delhi, IN</p>
+              <p>
+                Integrated internal/external data using SQL + SSIS, created Tableau dashboards, and automated finance reports. Led to 11% revenue uplift and 60% faster reporting.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* RESEARCH & PROJECTS */}
+      {/* PROJECTS */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">🧪 Research & Key Projects</h2>
+        <h2 className="text-3xl font-semibold mb-4">🚀 Key Projects</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>Grocery Store Review NLP:</strong> 98.4% accuracy on sentiment classification from 8,000+ Yelp reviews. (Python, AWS SageMaker)
-          </li>
-          <li>
-            <strong>Job Satisfaction Prediction:</strong> Revealed key drivers using regression and clustering. (Minitab, Tableau, SPSS)
-          </li>
-          <li>
-            <strong>Road Crack Detection:</strong> Deep learning model with 91% accuracy & repair dashboard for city planners. (TensorFlow, Python)
-          </li>
+          <li><strong>Grocery NLP:</strong> 98.4% sentiment accuracy from 8,000+ reviews to inform pricing strategies. (Python, AWS SageMaker)</li>
+          <li><strong>ASU Job Satisfaction:</strong> Used regression and clustering to reveal key drivers (R²=0.566). (Minitab, Tableau)</li>
+          <li><strong>Road Crack Detection:</strong> Deep learning + dashboards for city repair planning. 91% accuracy. (TensorFlow)</li>
         </ul>
+      </section>
+
+      {/* RESEARCH */}
+      <section>
+        <h2 className="text-3xl font-semibold mb-4">🔬 Research Work</h2>
+        <p>
+          At ASU, improved model explainability in Alzheimer’s detection (95% accuracy) and drone surveillance (30% lift over baseline). Also conducted A/B testing & behavioral analysis via Power BI and SQL.
+        </p>
       </section>
 
       {/* SKILLS */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">🛠 Skills & Tools</h2>
+        <h2 className="text-3xl font-semibold mb-2">🛠 Skills & Tools</h2>
         <p>
-          Python · R · SQL · Power BI · Tableau · Excel · ETL · NLP · Predictive Modeling · GA4 · Apps Script · Minitab · SPSS · Keras · AWS · SAP (Inventory)
+          Python · SQL · R · Power BI · Tableau · Excel · Apps Script · Minitab · NLP · GA4 · SSIS · ETL · Data Modeling · AWS · SAP (Inventory)
         </p>
       </section>
 
       {/* LEADERSHIP */}
       <section>
-        <h2 className="text-2xl font-semibold mb-2">🎭 Leadership</h2>
+        <h2 className="text-3xl font-semibold mb-2">🎭 Leadership & Theatre</h2>
         <p>
-          Former actor, director, and production head at Sukhmanch Theatre and SRCC’s dramatics society. Directed 40+ performances, led 20-member teams, and produced campaigns with 20K+ reach.
+          Led dramatics societies at SRCC and Sukhmanch Theatre. Directed award-winning plays (58+ performances), campaigns with 20K+ reach, and socially themed productions on LGBTQ+ inclusion and financial literacy.
         </p>
       </section>
 
       {/* CONTACT */}
-      <footer className="text-center border-t pt-6">
-        <p>📧 vkhann13@asu.edu · vasukhanna6292@gmail.com · 📱 +1 (480) 796-9732</p>
-        <p>🔗 <a href="https://linkedin.com/in/vasu-khanna10" className="underline text-blue-600">LinkedIn</a></p>
+      <footer className="text-center pt-10 border-t mt-10 text-sm">
+        <p>Email: vkhann13@asu.edu · vasukhanna6292@gmail.com</p>
+        <p>Phone: +1 (480) 796-9732</p>
+        <p><a className="underline text-blue-600" href="https://linkedin.com/in/vasu-khanna10">LinkedIn</a></p>
       </footer>
     </div>
   );
