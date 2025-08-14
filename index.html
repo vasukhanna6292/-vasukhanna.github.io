@@ -3,113 +3,207 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vasu Khanna · Business Analytics Portfolio</title>
-  <meta name="description" content="Portfolio of Vasu Khanna — MSBA @ ASU. Projects, experience, and skills in analytics, BI, product, and marketing strategy." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2Pkf1QJ5r5vR8RAwOB1p5MN1neCEi0aYawslZx3Z1ZC2QxO3v4jL8rE2kw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Vasu Khanna · Portfolio</title>
+  <meta name="description" content="Business Analytics, Product Management, and Strategy Portfolio of Vasu Khanna" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg:#0b1020;
-      --card:#121936;
-      --muted:#9aa3b2;
-      --text:#e8ecf8;
-      --brand:#7c5cff;
-      --brand-2:#00d1ff;
-      --ring: 0 0 0 3px rgba(124,92,255,.25);
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #fdfdfd;
+      color: #222;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:radial-gradient(1200px 900px at 80% -10%, rgba(124,92,255,.25), transparent 60%), radial-gradient(1000px 700px at -10% -20%, rgba(0,209,255,.18), transparent 60%), var(--bg); color:var(--text)}
-    a{color:inherit; text-decoration:none}
-    header{position:sticky; top:0; backdrop-filter:saturate(180%) blur(10px); background:rgba(11,16,32,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
-    .nav{max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
-    .nav .brand{display:flex; gap:12px; align-items:center; font-weight:700}
-    .badge{padding:4px 10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-radius:999px; font-size:12px; font-weight:700; letter-spacing:.3px}
-    .nav a.link{padding:8px 10px; border-radius:8px; font-weight:600; color:var(--muted)}
-    .nav a.link:hover{color:var(--text); background:rgba(255,255,255,.06)}
-    .container{max-width:1100px; margin:auto; padding:28px 20px 60px}
-    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:32px 0 8px}
-    .hero h1{font-size:clamp(28px,5vw,46px); line-height:1.1; margin:8px 0}
-    .cta{display:flex; gap:12px; margin-top:18px}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); font-weight:700}
-    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.08)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-color:transparent}
-    .grid{display:grid; gap:16px}
-    .two{grid-template-columns:repeat(2,1fr)}
-    .three{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:860px){
-      .hero{grid-template-columns:1fr}
-      .two,.three{grid-template-columns:1fr}
+    header {
+      background: #ffffff;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e2e2e2;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    section{margin-top:44px}
-    h2{font-size:clamp(20px,3.3vw,28px); margin:0 0 14px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:18px}
-    .muted{color:var(--muted)}
-    .kicker{font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); font-weight:800}
-    .row{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
-    .pill{padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); font-weight:600; font-size:12px}
-    .list{display:flex; flex-direction:column; gap:12px}
-    .item{display:flex; justify-content:space-between; gap:14px; border:1px dashed rgba(255,255,255,.12); border-radius:12px; padding:12px}
-    .item h3{margin:0 0 6px; font-size:18px}
-    footer{border-top:1px solid rgba(255,255,255,.08); padding:24px 20px; text-align:center; color:var(--muted)}
-    :focus-visible{outline:none; box-shadow:var(--ring)}
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #0077cc;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    .kicker {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #888;
+      letter-spacing: 1px;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 10px 8px 0 0;
+      background: #0077cc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn.secondary {
+      background: #e2e2e2;
+      color: #222;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      padding: 20px;
+      border-top: 1px solid #eaeaea;
+    }
+    ul { padding-left: 20px; }
+    .pill { background: #eee; padding: 4px 10px; border-radius: 999px; font-size: 12px; display: inline-block; margin: 4px; }
   </style>
 </head>
 <body>
   <header>
-    <nav class="nav" aria-label="Primary">
-      <div class="brand"><span class="badge" aria-hidden="true">VK</span> <span>Vasu Khanna</span></div>
-      <div class="row" role="navigation">
-        <a class="link" href="#about">About</a>
-        <a class="link" href="#experience">Experience</a>
-        <a class="link" href="#research">Research</a>
-        <a class="link" href="#projects">Projects</a>
-        <a class="link" href="#skills">Skills</a>
-        <a class="link" href="#contact">Contact</a>
-      </div>
+    <div><strong>VK</strong> Vasu Khanna</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main class="container">
-    <section class="hero" id="top">
+    <section class="hero">
       <div>
-        <p class="kicker">Business Analytics · BI · Data Science · Product Management · Operations Consulting · Marketing Analytics · Strategic Insights</p>
+        <p class="kicker">Business Analytics · Product · Strategy · Marketing Analytics · Ops Consulting</p>
         <h1>Hi all, I’m Vasu</h1>
-        <div class="cta">
-          <a class="btn primary" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
-          <a class="btn" href="assets/Vasu_Khanna_BA_DA_Resume.pdf" target="_blank" rel="noreferrer"><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
-          <a class="btn" href="https://www.linkedin.com/in/vasu-khanna10" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </div>
+        <p>Business Analytics professional and MSBA candidate at ASU, combining precision, strategy, and storytelling to drive growth and decision-making impact.</p>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn secondary" href="assets/Vasu_Khanna_CV.pdf" target="_blank">Download Resume</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/vasu-khanna10">LinkedIn</a>
       </div>
-      <div class="card" aria-label="Quick facts">
-        <h2 style="margin:0 0 8px">Quick facts</h2>
-        <div class="list">
-          <div class="item">
-            <div>
-              <strong>Current</strong>
-              <div class="muted">
-                MSBA · W. P. Carey, ASU<br>
-                Research Assistant, IS Lab – ASU
-              </div>
-            </div>
-            <div class="pill">Tempe, AZ</div>
-          </div>
-          <div class="item">
-            <div>
-              <strong>Most recent role</strong>
-              <div class="muted">
-                Operations & Business Analyst Intern<br>Bangers Snack Inc.
-              </div>
-            </div>
-            <div class="pill">May–Aug 2025</div>
-          </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I specialize in analytics, operations, marketing, and product strategy — with a creative edge shaped by years in competitive theatre. I bring a unique blend of technical skill and human-centered insight to deliver measurable results.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div>
+          <h3>Operations & Business Analyst Intern — Bangers Snack Inc.</h3>
+          <p><em>May 2025 – Aug 2025 · San Francisco, CA</em></p>
+          <ul>
+            <li>Built real-time inventory tracking with Forms, Sheets, Apps Script & Looker Studio, improving speed by 96%.</li>
+            <li>Led D2C launch via Amazon FBA; generated $3.1K+ revenue from 71 orders in 3 months.</li>
+            <li>Enabled SKU-level stock audits, automated ID tracking, and SAP-aligned workflows.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Marketing Analyst Intern — DG Brew Technologies</h3>
+          <p><em>May 2023 – Jun 2023 · New Delhi, IN</em></p>
+          <ul>
+            <li>Improved SEO and digital strategy; boosted visibility by 25% via keyword & KPI dashboards.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Data Analyst Intern — ESC India</h3>
+          <p><em>Oct 2022 – Apr 2023 · New Delhi, IN</em></p>
+          <ul>
+            <li>Created KPIs from export data using Python; enhanced promo effectiveness by 15%.</li>
+            <li>Built ETL pipelines and refactored SQL queries to cut database response time by 35%.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Keep the rest of your sections the same (About, Experience, Research, etc.) -->
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Research Assistant — Information Systems Department, ASU</h3>
+      <p><em>Jan 2025 – Present</em></p>
+      <ul>
+        <li>Enhanced transparency of Alzheimer’s AI detection; achieved 95% accuracy with subclass redesign.</li>
+        <li>Created drone detection reports showing 30% lift over baseline.</li>
+        <li>Performed A/B testing and visual analytics to improve outreach strategy by 27% on LinkedIn.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div>
+          <h3>Grocery Review Analysis</h3>
+          <p>Built NLP pipeline on 8,000+ Yelp reviews to detect satisfaction drivers (98.4% accuracy).</p>
+        </div>
+        <div>
+          <h3>Job Satisfaction Prediction</h3>
+          <p>Used regression & clustering on part-time data (R² = 0.566); segmented workforce for retention planning.</p>
+        </div>
+        <div>
+          <h3>Road Crack Detection</h3>
+          <p>Trained deep learning model (Dice = 0.81) to prioritize bike-lane repairs based on severity scores.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p><strong>Programming:</strong> Python, R, SQL</p>
+      <p><strong>Data & BI:</strong> Power BI, Tableau, Excel, Regression, A/B Testing, NLP</p>
+      <p><strong>Platforms & Tools:</strong> BigQuery, Snowflake, MS SQL Server, SSIS, Minitab, SPSS, Apps Script, SAP, HubSpot</p>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership</h2>
+      <div>
+        <h3>Sukhmanch Theatre (2021–2023)</h3>
+        <ul>
+          <li>Directed and acted in plays addressing social issues under renowned director Shilpi Marwaha.</li>
+        </ul>
+        <h3>Dramatics Society, SRCC (2018–2020)</h3>
+        <ul>
+          <li>Directed "The Seminar Room" on financial literacy; led 42 performances with 7 awards.</li>
+          <li>Performed "AYAAN" on LGBTQ+ inclusion; 58 shows across Delhi.</li>
+          <li>Created video promos with 20K+ reach for India’s largest theatre festival.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:vkhann13@asu.edu">vkhann13@asu.edu</a>, <a href="mailto:vasukhanna6292@gmail.com">vasukhanna6292@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/vasu-khanna10">linkedin.com/in/vasu-khanna10</a></p>
+      <p>Phone: <a href="tel:+14807969732">+1 (480) 796-9732</a></p>
+    </section>
   </main>
 
   <footer>
@@ -117,7 +211,7 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
